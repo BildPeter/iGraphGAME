@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB05BE57146C6A7D00D911D3 /* GraphGenerator_OutPut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */; };
 		DB316269143C8D9D00C59549 /* iGraph_Generation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB316268143C8D9D00C59549 /* iGraph_Generation.1 */; };
+		DBABCA18163FCAAB003E148D /* LEMON2iGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +29,7 @@
 		DB316262143C8D9D00C59549 /* iGraph_Generation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iGraph_Generation; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphGenerator_OutPut.cpp; sourceTree = "<group>"; };
 		DB316268143C8D9D00C59549 /* iGraph_Generation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iGraph_Generation.1; sourceTree = "<group>"; };
+		DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LEMON2iGraph.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */,
+				DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */,
 				DB1DF8DE146031E400AB37B5 /* GraphLayout.cpp */,
 				DB316268143C8D9D00C59549 /* iGraph_Generation.1 */,
 			);
@@ -127,7 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB05BE57146C6A7D00D911D3 /* GraphGenerator_OutPut.cpp in Sources */,
+				DBABCA18163FCAAB003E148D /* LEMON2iGraph.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
