@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1EE64016401B180074DD10 /* NRW_Layout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBABCA1A163FEDA0003E148D /* NRW_Layout.cpp */; };
 		DB316269143C8D9D00C59549 /* iGraph_Generation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB316268143C8D9D00C59549 /* iGraph_Generation.1 */; };
-		DBABCA1C163FF26D003E148D /* LEMON2iGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBABCA1C163FF26D003E148D /* LEMON2iGraph.cpp in Sources */,
+				DB1EE64016401B180074DD10 /* NRW_Layout.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +142,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -168,7 +168,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;

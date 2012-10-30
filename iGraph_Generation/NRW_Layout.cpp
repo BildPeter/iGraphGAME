@@ -11,6 +11,7 @@
 #include <lemon/list_graph.h>
 #include <lemon/lgf_reader.h>
 #include <lemon/lgf_writer.h>
+#include <lemon/time_measure.h>
 
 #include "peter/layouts.h"
 
@@ -20,15 +21,57 @@ using namespace std;
 int main(){
 
     ListDigraph                     g;
-    ListDigraph::NodeMap< double >  xCoord(g);
-    ListDigraph::NodeMap< double >  yCoord(g);
-
     
-    digraphReader( g, "")
+    /*
+     NODES
+     name	xCoord	yCoord	size_all	size_cattle	size_pork	degree	inDegree	outDegree	inFlow	outFlow	flowDifference	transactions	     
+     int    long    long    int ...etc...
+     
+     ARCS
+     label	from	to	flow	transactions
+     int
+     */
+    ListDigraph::NodeMap< long >    xCoord(g);
+    ListDigraph::NodeMap< long >    yCoord(g);
+    ListDigraph::NodeMap< int >     name(g);
+    ListDigraph::NodeMap< int >     size_pork(g);
+    ListDigraph::NodeMap< double >  xCoordTopo(g);
+    ListDigraph::NodeMap< double >  yCoordTopo(g);
+    ListDigraph::ArcMap<  int >     from(g);
+    ListDigraph::ArcMap<  int >     to(g);
+    ListDigraph::ArcMap<  int >     flow(g);
+    
+    digraphReader( g, "/Users/sonneundasche/Dropbox/FLI/DATA/EinBundesland/03 Processed/tradeData_processed.lgf")
+    .nodeMap("name", name)
+    .nodeMap("xCoord", xCoord)
+    .nodeMap("yCoord", yCoord)
+    .nodeMap("size_pork", size_pork)
+    .arcMap("from", from)
+    .arcMap("to", to)
+    .arcMap("flow", flow)
     .run();
-
+    
+    cout << "Daten gelesen"<< endl;
+    Timer   T;
+    
     layoutKamadaKawai* KKdyn = new layoutKamadaKawai( &g);
-    KKdyn->setCoordinateMaps( &xCoord, &yCoord);
+    KKdyn->setCoordinateMaps( &xCoordTopo, &yCoordTopo);
     KKdyn->calculate( 100 );
     delete KKdyn;
+    
+    cout << "Layout Berechnung: " << T.realTime() << " sek" << endl;
+    
+    digraphWriter( g, "/Users/sonneundasche/Dropbox/FLI/DATA/EinBundesland/03 Processed/data_Layout_kamadaKawai.lgf")
+    .nodeMap("name", name)
+    .nodeMap("xCoord", xCoord)
+    .nodeMap("yCoord", yCoord)
+    .nodeMap("xCoordTopo", xCoordTopo)
+    .nodeMap("yCoordTopo", yCoordTopo)
+    .nodeMap("size_pork", size_pork)
+    .arcMap("from", from)
+    .arcMap("to", to)
+    .arcMap("flow", flow)
+    .run();
+    
+    cout << "done!" << endl;
 }
