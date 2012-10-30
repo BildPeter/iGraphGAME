@@ -19,7 +19,8 @@
 #include <lemon/list_graph.h>
 #include <igraph.h>
 
-#include "LEMON2iGraph.h"
+//#include "layoutKamadaKawai.h"
+#include "peter/layouts.h"
 
 using namespace lemon;
 using namespace std;
@@ -34,9 +35,10 @@ int main(){
     leGr.addNode();
     leGr.addArc( leGr.nodeFromId( 1 ), leGr.nodeFromId( 2 ) );
     
-    layoutKamadaKawai                   KK( &leGr);
-    KK.setCoordinateMaps( &xCoord, &yCoord );
-    KK.calculate( 100 );
+    layoutKamadaKawai * KK = new layoutKamadaKawai( &leGr);
+    KK->setCoordinateMaps( &xCoord, &yCoord );
+    KK->calculate( 100 );
+    delete KK;
     
     cout << endl << "LEMON" << endl;
     for (ListDigraph::NodeIt n(leGr); n!=INVALID; ++n) {

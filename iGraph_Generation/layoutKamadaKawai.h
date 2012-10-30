@@ -1,6 +1,5 @@
 //
-//  LEMON2iGraph.h
-//  iGraph_Generation
+//  layoutKamadaKawai.h
 //
 //  Created by Peter A. Kolski on 30.10.12.
 //  Copyright (c) 2012 BildPeter Visuals. All rights reserved.
@@ -12,8 +11,8 @@
 using namespace lemon;
 using namespace std;
 
-#ifndef iGraph_Generation_LEMON2iGraph_h
-#define iGraph_Generation_LEMON2iGraph_h
+#ifndef layoutKamadaKawai_h
+#define layoutKamadaKawai_h
 
 class layoutKamadaKawai
 {
@@ -55,7 +54,6 @@ layoutKamadaKawai::layoutKamadaKawai(ListDigraph *LEMON_Graph )
 }
 
 layoutKamadaKawai::~layoutKamadaKawai(){
-
     igraph_matrix_destroy( &mLayoutMatrix );
     igraph_vector_destroy( &edgeVec );
     igraph_destroy( &g );
@@ -70,8 +68,8 @@ void layoutKamadaKawai::initGraph(){
     igraph_vector_init( &edgeVec, countArcs( *mLEGraph)*2 );
     int i = 0;
     for (ListDigraph::ArcIt a( *mLEGraph ); a!=INVALID; ++a) {
-        VECTOR( edgeVec )[ i++ ] = (*mLEGraph).id( (*mLEGraph).source( a ) );
-        VECTOR( edgeVec )[ i++ ] = (*mLEGraph).id( (*mLEGraph).target( a ) );
+        VECTOR( edgeVec )[ i++ ] = mLEGraph->id( mLEGraph->source( a ) );
+        VECTOR( edgeVec )[ i++ ] = mLEGraph->id( mLEGraph->target( a ) );
     }
     igraph_create( &g, &edgeVec, countNodes( *mLEGraph ), 1);  // graph erstellen
 
@@ -103,8 +101,8 @@ void layoutKamadaKawai::calculate( int iterations ){
         // --- Node
         for (int i = 0; i < igraph_matrix_nrow( &mLayoutMatrix ); i++) {
             // --- X & Y Coordinate
-            (*mXCoord)[ (*mLEGraph).nodeFromId( i ) ] =  MATRIX( mLayoutMatrix, i, 0);
-            (*mYCoord)[ (*mLEGraph).nodeFromId( i ) ] =  MATRIX( mLayoutMatrix, i, 1);
+            (*mXCoord)[ mLEGraph->nodeFromId( i ) ] =  MATRIX( mLayoutMatrix, i, 0);
+            (*mYCoord)[ mLEGraph->nodeFromId( i ) ] =  MATRIX( mLayoutMatrix, i, 1);
         }
     }
     else{
