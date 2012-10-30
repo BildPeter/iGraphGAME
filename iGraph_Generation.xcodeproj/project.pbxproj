@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB316269143C8D9D00C59549 /* iGraph_Generation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB316268143C8D9D00C59549 /* iGraph_Generation.1 */; };
-		DBABCA18163FCAAB003E148D /* LEMON2iGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */; };
+		DBABCA1B163FEDA0003E148D /* NRW_Layout.c in Sources */ = {isa = PBXBuildFile; fileRef = DBABCA1A163FEDA0003E148D /* NRW_Layout.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +31,7 @@
 		DB316268143C8D9D00C59549 /* iGraph_Generation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iGraph_Generation.1; sourceTree = "<group>"; };
 		DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LEMON2iGraph.cpp; sourceTree = "<group>"; };
 		DBABCA19163FD4A8003E148D /* LEMON2iGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMON2iGraph.h; sourceTree = "<group>"; };
+		DBABCA1A163FEDA0003E148D /* NRW_Layout.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NRW_Layout.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 			children = (
 				DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */,
 				DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */,
+				DBABCA1A163FEDA0003E148D /* NRW_Layout.c */,
 				DBABCA19163FD4A8003E148D /* LEMON2iGraph.h */,
 				DB1DF8DE146031E400AB37B5 /* GraphLayout.cpp */,
 				DB316268143C8D9D00C59549 /* iGraph_Generation.1 */,
@@ -131,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBABCA18163FCAAB003E148D /* LEMON2iGraph.cpp in Sources */,
+				DBABCA1B163FEDA0003E148D /* NRW_Layout.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
