@@ -26,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		DB1DF8DE146031E400AB37B5 /* GraphLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphLayout.cpp; sourceTree = "<group>"; };
+		DB1EE670164027DC0074DD10 /* layoutKamadaKawai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = layoutKamadaKawai.h; path = ../../../Development/Library/include/peter/layouts/layoutKamadaKawai.h; sourceTree = "<group>"; };
 		DB316262143C8D9D00C59549 /* iGraph_Generation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iGraph_Generation; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphGenerator_OutPut.cpp; sourceTree = "<group>"; };
 		DB316268143C8D9D00C59549 /* iGraph_Generation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iGraph_Generation.1; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		DB316257143C8D9D00C59549 = {
 			isa = PBXGroup;
 			children = (
+				DB1EE670164027DC0074DD10 /* layoutKamadaKawai.h */,
 				DB191E8C1463DB760032FDAD /* data */,
 				DB316265143C8D9D00C59549 /* iGraph_Generation */,
 				DB316263143C8D9D00C59549 /* Products */,
