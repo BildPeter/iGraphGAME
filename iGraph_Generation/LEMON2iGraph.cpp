@@ -19,7 +19,6 @@
 #include <lemon/list_graph.h>
 #include <igraph.h>
 
-//#include "layoutKamadaKawai.h"
 #include "peter/layouts.h"
 
 using namespace lemon;

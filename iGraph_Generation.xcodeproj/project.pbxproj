@@ -30,9 +30,7 @@
 		DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphGenerator_OutPut.cpp; sourceTree = "<group>"; };
 		DB316268143C8D9D00C59549 /* iGraph_Generation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iGraph_Generation.1; sourceTree = "<group>"; };
 		DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LEMON2iGraph.cpp; sourceTree = "<group>"; };
-		DBABCA19163FD4A8003E148D /* layoutKamadaKawai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = layoutKamadaKawai.h; sourceTree = "<group>"; };
 		DBABCA1A163FEDA0003E148D /* NRW_Layout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NRW_Layout.cpp; sourceTree = "<group>"; };
-		DBABCA1D163FF5F8003E148D /* layouts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = layouts.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +74,6 @@
 				DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */,
 				DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */,
 				DBABCA1A163FEDA0003E148D /* NRW_Layout.cpp */,
-				DBABCA19163FD4A8003E148D /* layoutKamadaKawai.h */,
-				DBABCA1D163FF5F8003E148D /* layouts.h */,
 				DB1DF8DE146031E400AB37B5 /* GraphLayout.cpp */,
 				DB316268143C8D9D00C59549 /* iGraph_Generation.1 */,
 			);

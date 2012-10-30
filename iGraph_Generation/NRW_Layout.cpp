@@ -12,7 +12,7 @@
 #include <lemon/lgf_reader.h>
 #include <lemon/lgf_writer.h>
 
-#include "layoutKamadaKawai.h"
+#include "peter/layouts.h"
 
 using namespace lemon;
 using namespace std;
