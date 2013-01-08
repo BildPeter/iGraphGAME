@@ -20,7 +20,7 @@ using namespace std;
 
 int main(){
 
-    ListDigraph                     g;
+    ListDigraph                g;
     
     /*
      NODES
