@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB1EE64016401B180074DD10 /* NRW_Layout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBABCA1A163FEDA0003E148D /* NRW_Layout.cpp */; };
 		DB316269143C8D9D00C59549 /* iGraph_Generation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB316268143C8D9D00C59549 /* iGraph_Generation.1 */; };
+		DB720C9016AE10D600FBB710 /* GraphGenerator_OutPut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +30,7 @@
 		DB316262143C8D9D00C59549 /* iGraph_Generation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iGraph_Generation; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphGenerator_OutPut.cpp; sourceTree = "<group>"; };
 		DB316268143C8D9D00C59549 /* iGraph_Generation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iGraph_Generation.1; sourceTree = "<group>"; };
+		DB720C8D16AE0D2000FBB710 /* GraphGenerator_OutPut_Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphGenerator_OutPut_Parser.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LEMON2iGraph.cpp; sourceTree = "<group>"; };
 		DBABCA1A163FEDA0003E148D /* NRW_Layout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NRW_Layout.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				DB316266143C8D9D00C59549 /* GraphGenerator_OutPut.cpp */,
+				DB720C8D16AE0D2000FBB710 /* GraphGenerator_OutPut_Parser.cpp */,
 				DBABCA16163FCAAB003E148D /* LEMON2iGraph.cpp */,
 				DBABCA1A163FEDA0003E148D /* NRW_Layout.cpp */,
 				DB1DF8DE146031E400AB37B5 /* GraphLayout.cpp */,
@@ -133,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1EE64016401B180074DD10 /* NRW_Layout.cpp in Sources */,
+				DB720C9016AE10D600FBB710 /* GraphGenerator_OutPut.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,8 +162,11 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/sonneundasche/Development/Library/include/;
+				LIBRARY_SEARCH_PATHS = /Users/sonneundasche/Development/Library/lib/;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lemon";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -180,7 +185,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/sonneundasche/Development/Library/include/;
+				LIBRARY_SEARCH_PATHS = /Users/sonneundasche/Development/Library/lib/;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-lemon";
 				SDKROOT = macosx;
 			};
 			name = Release;

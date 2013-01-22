@@ -1,3 +1,4 @@
+
 //
 //  main.cpp
 //  iGraph_Generation
@@ -25,15 +26,22 @@
 
 using namespace std;
 
-int main(void)
+int main( int argc, char** argv)
 {
+    if (argc < 2) {
+        cout << "Not enought arguments!" << endl << "NrNodes - density" << endl;
+        return -1;
+    }
     
-    igraph_integer_t    nrNodesToCreate  = 100000;
-    igraph_integer_t    nrOutArcsPerNode = 300;
+    
+    igraph_integer_t    nrNodesToCreate  = argv[0];
+    igraph_integer_t    nrOutArcsPerNode = argv[1];
+    
+//    ap.ref
+    
     igraph_t            graph;
     
 //    igraph_real_t       probArcs = 5.0/10;
-//    igraph_rea
 //    igraph_erdos_renyi_game(&graph, IGRAPH_ERDOS_RENYI_GNP, nrNodesToCreate , probArcs,
 //                            IGRAPH_UNDIRECTED, IGRAPH_NO_LOOPS);
 //    igraph_full( &graph, nrNodesToCreate, true, false);
@@ -59,9 +67,8 @@ int main(void)
     ofstream    fileOut;
     int         nodesAmount = igraph_vcount( &graph );  // Anzahl der Knoten
     
-    fileOut.open(  "/Users/sonneundasche/Desktop/iGraph_BarabasiAlbert.lgf" );
-//    fileOut.open(  "/Users/sonneundasche/Desktop/iGraph_Random_ER_100kC.lgf" );
-//    fileOut.open(  "/Users/sonneundasche/Desktop/iGraph_Full_10.lgf" );
+    fileOut.open("iGraph_BarabasiAlbert.lgf");
+
     
     // --- Arrtibutes
 //    fileOut << "@attributes" << endl;    
@@ -87,9 +94,6 @@ int main(void)
         edgeID++;
     }
 
-
-
-    
     // --- CLOSE ---
     fileOut.close();
     igraph_eit_destroy( &edgeIterator );
